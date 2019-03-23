@@ -3,7 +3,7 @@ require_relative( '../db/sql_runner' )
 class Session
   attr_reader :id
   attr_accessor :name, :location, :distance, :level, :day, :time_of_day, :price,
-  :customers_id
+  :max_number, :customers_id
  def initialize(options)
    @id = options['id'].to_i if options['id']
    @name = options['name']
@@ -13,36 +13,37 @@ class Session
    @day = options['day']
    @time_of_day = options['time_of_day'].to_i
    @price = options['price'].to_i
+   @max_number = options['max_number'].to_i
    @customers_id = options['customers_id'].to_i
  end
 
  def save()
    sql = "INSERT INTO sessions
    (
-     name, location, distance, level, day, time_of_day, price, customers_id
+     name, location, distance, level, day, time_of_day, price, max_number, customers_id
 
    )
    VALUES
    (
-     $1, $2, $3, $4, $5, $6, $7, $8
+     $1, $2, $3, $4, $5, $6, $7, $8, $9
    )
    RETURNING id"
-   values = [@name, @location, @distance, @level, @day, @time_of_day, @price, @customers_id]
+   values = [@name, @location, @distance, @level, @day, @time_of_day, @price, @max_number, @customers_id]
    results = SqlRunner.run(sql, values)
    @id = results.first()['id'].to_i
  end
 
  def update
    sql = 'UPDATE sessions SET
-   (name, location, distance, level, day, time_of_day, price, customers_id) =
-   ($1, $2, $3, $4, $5, $6, $7, $8) WHERE id=$9'
-   values = [@name, @location, @distance, @level, @day, @time_of_day, @price, @customer_id, @id]
+   (name, location, distance, level, day, time_of_day, price, max_number, customers_id) =
+   ($1, $2, $3, $4, $5, $6, $7, $8, $9) WHERE id=$10'
+   values = [@name, @location, @distance, @level, @day, @time_of_day, @price, @max_number, @customer_id, @id]
    SqlRunner.run(sql, values)
   end
 
- def delete
+ def self.delete(id)
    sql = 'DELETE FROM sessions WHERE id = $1'
-   values = [@id]
+   values = [id]
    SqlRunner.run(sql, values)
  end
 

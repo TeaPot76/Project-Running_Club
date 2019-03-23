@@ -19,5 +19,6 @@ CREATE TABLE sessions(
   day VARCHAR(255),
   time_of_day TIME,
   price INT4,
+  max_number INT4,
   customers_id INT4 REFERENCES customers(id) ON DELETE CASCADE
 );

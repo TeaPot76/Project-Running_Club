@@ -3,8 +3,8 @@ require_relative( "../models/session.rb" )
 
 require("pry-byebug")
 
-Customer.delete_all
-Session.delete_all
+# Customer.delete_all
+# Session.delete_all
 
   customer1 = Customer.new({
    'first_name' => 'Alice',
@@ -56,14 +56,14 @@ Session.delete_all
     'town' => 'Edinburgh'})
 
 
-
-       customer1.save
-       customer2.save
-       customer3.save
-       customer4.save
-       customer5.save
-       customer6.save
-       customer7.save
+       #
+       # customer1.save
+       # customer2.save
+       # customer3.save
+       # customer4.save
+       # customer5.save
+       # customer6.save
+       # customer7.save
 
   session1 = Session.new({
     'name' => "Beginner road",
@@ -73,6 +73,7 @@ Session.delete_all
     'day' => "Monday",
     'time_of_day' => 1730,
     'price' => 5,
+    'max_number' => 10,
     'customers_id' => customer1.id})
 
   session2 = Session.new({
@@ -83,6 +84,7 @@ Session.delete_all
     'day' => "Tuesday",
     'time_of_day' => 1730,
     'price' => 5,
+    'max_number' => 10,
     'customers_id' => customer5.id })
 
   session3 = Session.new({
@@ -92,7 +94,8 @@ Session.delete_all
    'level' => 2,
    'day' => "Wednesday",
    'time_of_day' => 1800,
-   'price' => 5,
+   'price' => 7,
+   'max_number' =>10,
    'customers_id' => customer3.id })
 
   session4 = Session.new({
@@ -102,7 +105,8 @@ Session.delete_all
    'level' => 2,
    'day' => "Thursday",
    'time_of_day' => 1800,
-   'price' => 5,
+   'price' => 7,
+   'max_number' => 8,
    'customers_id' => customer6.id })
 
   session5 = Session.new({
@@ -112,14 +116,17 @@ Session.delete_all
    'level' => 3,
    'day' => "Saturday",
    'time_of_day' => 1000,
-   'price' => 5,
+   'price' => 10,
+   'max_number' => 5,
    'customers_id' => customer7.id })
 
-   session1.save
-   session2.save
-   session3.save
-   session4.save
-   session5.save
+    session5.location = "Pentland Hills"
+    session5.update
+   # session1.save
+   # session2.save
+   # session3.save
+   # session4.save
+   # session5.save
 
    binding.pry
 nil

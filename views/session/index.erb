@@ -1,0 +1,9 @@
+<h1>Running Club Sessions</h1>
+<p> Choose one of listed below session </P>
+   <% for session in @sessions %>
+  <ul>
+    <li><a href="/session/<%= session.id %>"><%= session.name %></a></li>
+
+    <li<%= session.distance %></li>
+  </ul>
+  <% end %>

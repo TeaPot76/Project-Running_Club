@@ -1,0 +1,15 @@
+
+<h1> Our customers</h1>
+
+
+
+    <div id="customer">
+      <% @customers.each do |customer| %>
+
+
+        <h3><a href="/customer/<%= customer.id %>"><%= customer.first_name %></a></h3>
+
+
+
+      <% end %>
+    </div>

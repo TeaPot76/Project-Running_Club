@@ -1,9 +1,16 @@
 <h1>Running Club Members</h1>
-<p> Add new member </p> <a href= "/new"></a>
+<p>
+  Add new member
+</p>
+<a href="/new"></a>
 
-<p> Choose one of listed below members </p>
+<p>
+  Choose one of listed below members
+</p>
 
-
-  <% @members.each do |member| %>
-  <h3><a href="/manager/member/<%= member.id %>"><%= member.first_name %> <%=member.last_name%></a></h3>
-  <% end %>
+<% @members.each do |member| %>
+  <h3>
+    <a href="/manager/member/<%= member.id %>"><%= member.first_name %>
+      <%=member.last_name%></a>
+  </h3>
+<% end %>

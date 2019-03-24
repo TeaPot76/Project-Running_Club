@@ -11,7 +11,8 @@ Session.delete_all
    'last_name' => 'Cooper',
     'age' => 52,
     'level' => 1,
-    'town' => 'Edinburgh'})
+    'town' => 'Edinburgh'
+    })
 
   member2 = Member.new({
     'first_name' => 'Steve',
@@ -73,8 +74,7 @@ Session.delete_all
     'day' => "Monday",
     'time_of_day' => 1730,
     'price' => 5,
-    'max_number' => 10,
-    'members_id' => member4.id})
+    'max_number' => 10})
 
   session2 = Session.new({
     'name' => "Beginner hills",
@@ -84,8 +84,7 @@ Session.delete_all
     'day' => "Tuesday",
     'time_of_day' => 1730,
     'price' => 5,
-    'max_number' => 10,
-    'members_id' => member5.id })
+    'max_number' => 10 })
 
   session3 = Session.new({
    'name' => "Intermediate road",
@@ -95,8 +94,8 @@ Session.delete_all
    'day' => "Wednesday",
    'time_of_day' => 1800,
    'price' => 7,
-   'max_number' =>10,
-   'members_id' => member3.id })
+   'max_number' =>10
+    })
 
   session4 = Session.new({
    'name' => "Intermediate hills",
@@ -106,8 +105,8 @@ Session.delete_all
    'day' => "Thursday",
    'time_of_day' => 1800,
    'price' => 7,
-   'max_number' => 8,
-   'members_id' => member6.id })
+   'max_number' => 8
+    })
 
   session5 = Session.new({
    'name' => "Advanced hills",
@@ -117,8 +116,8 @@ Session.delete_all
    'day' => "Saturday",
    'time_of_day' => 1000,
    'price' => 10,
-   'max_number' => 5,
-   'members_id' => member7.id })
+   'max_number' => 5
+    })
 
     # session5.location = "Pentland Hills"
     # session5.update

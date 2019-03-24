@@ -10,6 +10,7 @@ class Member
    @age = options['age'].to_i
    @level = options['level'].to_i
    @town = options['town']
+   @sessions_id = options['sessions_id']
 end
 
 def save()

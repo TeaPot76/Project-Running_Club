@@ -1,0 +1,9 @@
+<p>Member name: <%= @member.first_name %></p>
+<p>Member last name: <%= @member.last_name %></p>
+<p>Member age: <%= @member.age %></p>
+<p>Member level: <%= @member.level %></p>
+<p>Member town: <%= @member.town %></p>
+
+<form method="post" action="/member/<%= @member.id %>/edit">
+  <input type="submit" value="Edit Member"/>
+</form>

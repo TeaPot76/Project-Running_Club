@@ -1,0 +1,7 @@
+<h1>Running Club Members</h1>
+<p> Choose one of listed below members </P>
+
+
+  <% @members.each do |member| %>
+  <h3><a href="/manager/member/<%= member.id %>"><%= member.first_name %> <%=member.last_name%></a></h3>
+  <% end %>

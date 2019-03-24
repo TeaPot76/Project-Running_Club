@@ -1,0 +1,8 @@
+<p>Session name: <%= @session.name %></p>
+<p>Session location: <%= @session.location %></p>
+<p>Session distance: <%= @session.distance %></p>
+<p>Session level: <%= @session.level %></p>
+<p><a href="/manager/session/<%= @session.id %>/edit">Edit Session</a></p>
+<form method="post" action="/manager/session/<%= @session.id %>/delete">
+  <input type="submit" value="Delete Session"/>
+</form>

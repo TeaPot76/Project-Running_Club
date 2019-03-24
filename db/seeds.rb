@@ -1,54 +1,54 @@
-require_relative( "../models/customer.rb" )
+require_relative( "../models/member.rb" )
 require_relative( "../models/session.rb" )
 
 require("pry-byebug")
 
-# Customer.delete_all
-# Session.delete_all
+Member.delete_all
+Session.delete_all
 
-  customer1 = Customer.new({
+  member1 = Member.new({
    'first_name' => 'Alice',
    'last_name' => 'Cooper',
     'age' => 52,
     'level' => 1,
     'town' => 'Edinburgh'})
 
-  customer2 = Customer.new({
+  member2 = Member.new({
     'first_name' => 'Steve',
     'last_name' => 'Harris',
     'age' => 48,
     'level' => 2,
     'town' => 'Edinburgh'})
 
-  customer3 = Customer.new({
+  member3 = Member.new({
     'first_name' => 'Alice',
     'last_name' => 'Chains',
     'age' => 34,
     'level' => 2,
     'town' => 'Edinburgh'})
 
-  customer4 = Customer.new({
+  member4 = Member.new({
     'first_name' => 'Mandy',
     'last_name' => 'Hall',
     'age' => 30,
     'level' => 1,
     'town' => 'Edinburgh'})
 
-  customer5 = Customer.new({
+  member5 = Member.new({
     'first_name' => 'Angie',
     'last_name' => 'Will',
     'age' => 30,
     'level' => 1,
     'town' => 'Edinburgh'})
 
-  customer6 = Customer.new({
+  member6 = Member.new({
     'first_name' => 'Bil',
     'last_name' => 'Ruby',
     'age' => 35,
     'level' => 2,
     'town' => 'Edinburgh'})
 
-  customer7 = Customer.new({
+  member7 = Member.new({
     'first_name' => 'Anna',
     'last_name' => 'Holland',
     'age' => 27,
@@ -57,13 +57,13 @@ require("pry-byebug")
 
 
        #
-     # customer1.save
-       # customer2.save
-       # customer3.save
-        customer4.save
-       # customer5.save
-       # customer6.save
-       # customer7.save
+     member1.save
+     member2.save
+     member3.save
+     member4.save
+     member5.save
+     member6.save
+     member7.save
 
   session1 = Session.new({
     'name' => "Beginner road",
@@ -74,7 +74,7 @@ require("pry-byebug")
     'time_of_day' => 1730,
     'price' => 5,
     'max_number' => 10,
-    'customers_id' => customer4.id})
+    'members_id' => member4.id})
 
   session2 = Session.new({
     'name' => "Beginner hills",
@@ -85,7 +85,7 @@ require("pry-byebug")
     'time_of_day' => 1730,
     'price' => 5,
     'max_number' => 10,
-    'customers_id' => customer5.id })
+    'members_id' => member5.id })
 
   session3 = Session.new({
    'name' => "Intermediate road",
@@ -96,7 +96,7 @@ require("pry-byebug")
    'time_of_day' => 1800,
    'price' => 7,
    'max_number' =>10,
-   'customers_id' => customer3.id })
+   'members_id' => member3.id })
 
   session4 = Session.new({
    'name' => "Intermediate hills",
@@ -107,7 +107,7 @@ require("pry-byebug")
    'time_of_day' => 1800,
    'price' => 7,
    'max_number' => 8,
-   'customers_id' => customer6.id })
+   'members_id' => member6.id })
 
   session5 = Session.new({
    'name' => "Advanced hills",
@@ -118,15 +118,15 @@ require("pry-byebug")
    'time_of_day' => 1000,
    'price' => 10,
    'max_number' => 5,
-   'customers_id' => customer7.id })
+   'members_id' => member7.id })
 
     # session5.location = "Pentland Hills"
     # session5.update
    session1.save
-   # session2.save
-   # session3.save
-   # session4.save
-   # session5.save
+   session2.save
+   session3.save
+   session4.save
+   session5.save
 
    binding.pry
 nil

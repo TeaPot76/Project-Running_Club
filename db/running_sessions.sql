@@ -1,7 +1,7 @@
-DROP TABLE IF EXISTS customers;
+DROP TABLE IF EXISTS members;
 DROP TABLE IF EXISTS sessions;
 
-CREATE TABLE customers(
+CREATE TABLE members(
   id SERIAL8 primary key,
   first_name VARCHAR(255),
   last_name VARCHAR(255),
@@ -20,5 +20,5 @@ CREATE TABLE sessions(
   time_of_day TIME,
   price INT4,
   max_number INT4,
-  customers_id INT4 REFERENCES customers(id) ON DELETE CASCADE
+  members_id INT4 REFERENCES members(id) ON DELETE CASCADE
 );

@@ -1,0 +1,15 @@
+
+<h1> Our members</h1>
+
+
+
+    <div id="member">
+      <% @members.each do |member| %>
+
+
+        <h3><a href="/member/<%= member.id %>"><%= member.first_name %></a></h3>
+
+
+
+      <% end %>
+    </div>

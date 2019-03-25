@@ -1,8 +1,9 @@
 require_relative( "../models/session.rb" )
 require_relative( "../models/member.rb" )
+require_relative( "../models/booking.rb" )
 
 require("pry-byebug")
- # 
+ #
  # Member.delete_all
  # Session.delete_all
   session1 = Session.new({
@@ -71,8 +72,7 @@ require("pry-byebug")
    'last_name' => 'Cooper',
     'age' => 52,
     'level' => 1,
-    'town' => 'Edinburgh',
-    'sessions_id' => session1.id
+    'town' => 'Edinburgh'
     })
 
   member2 = Member.new({
@@ -80,51 +80,45 @@ require("pry-byebug")
     'last_name' => 'Harris',
     'age' => 48,
     'level' => 2,
-    'town' => 'Edinburgh',
-    'sessions_id' => session3.id})
+    'town' => 'Edinburgh'})
 
   member3 = Member.new({
     'first_name' => 'Alice',
     'last_name' => 'Chains',
     'age' => 34,
     'level' => 2,
-    'town' => 'Edinburgh',
-    'sessions_id' => session3.id})
+    'town' => 'Edinburgh'})
 
   member4 = Member.new({
     'first_name' => 'Mandy',
     'last_name' => 'Hall',
     'age' => 30,
     'level' => 1,
-    'town' => 'Edinburgh',
-    'sessions_id' => session1.id})
+    'town' => 'Edinburgh'})
 
   member5 = Member.new({
     'first_name' => 'Angie',
     'last_name' => 'Will',
     'age' => 30,
     'level' => 1,
-    'town' => 'Edinburgh',
-    'sessions_id' => session2.id})
+    'town' => 'Edinburgh'})
 
   member6 = Member.new({
     'first_name' => 'Bil',
     'last_name' => 'Ruby',
     'age' => 35,
     'level' => 2,
-    'town' => 'Edinburgh',
-    'sessions_id' => session2.id})
+    'town' => 'Edinburgh'})
 
   member7 = Member.new({
     'first_name' => 'Anna',
     'last_name' => 'Holland',
     'age' => 27,
     'level' => 3,
-    'town' => 'Edinburgh',
-    'sessions_id' => session5.id})
+    'town' => 'Edinburgh'})
 
 
-     #
+     # #
      # member1.save
      # member2.save
      # member3.save
@@ -132,6 +126,43 @@ require("pry-byebug")
      # member5.save
      # member6.save
      # member7.save
+
+  booking1 = Booking.new({
+    'instructor_name' => 'Eddie',
+    'members_id' => member1.id,
+    'sessions_id' => session1.id
+      })
+  booking2 = Booking.new({
+    'instructor_name' => 'Alan',
+    'members_id' => member2.id,
+    'sessions_id' => session1.id
+        })
+  booking3 = Booking.new({
+   'instructor_name' => 'Dan',
+    'members_id' => member3.id,
+    'sessions_id' => session3.id})
+
+  booking4 = Booking.new({
+      'instructor_name' => 'Eddie',
+      'members_id' => member4.id,
+      'sessions_id' => session3.id
+        })
+  booking5 = Booking.new({
+      'instructor_name' => 'Alan',
+      'members_id' => member5.id,
+      'sessions_id' => session4.id
+          })
+  booking6 = Booking.new({
+     'instructor_name' => 'Dan',
+      'members_id' => member7.id,
+      'sessions_id' => session5.id})
+  #
+  # booking1.save
+  # booking2.save
+  # booking3.save
+  # booking4.save
+  # booking5.save
+  # booking6.save
 
 
    binding.pry

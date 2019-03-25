@@ -2,7 +2,7 @@ require_relative( '../db/sql_runner' )
 
 class Member
   attr_reader :id
-  attr_accessor :first_name, :last_name, :age, :level, :town, :sessions_id, :sessions_id
+  attr_accessor :first_name, :last_name, :age, :level, :town
  def initialize(options)
    @id = options['id'].to_i if options['id']
    @first_name = options['first_name']
@@ -10,29 +10,29 @@ class Member
    @age = options['age'].to_i
    @level = options['level'].to_i
    @town = options['town']
-   @sessions_id = options['sessions_id'].to_i
+
 end
 
 def save()
   sql = "INSERT INTO members
   (
-    first_name, last_name, age, level, town, sessions_id
+    first_name, last_name, age, level, town
 
   )
   VALUES
   (
-    $1, $2, $3, $4, $5, $6
+    $1, $2, $3, $4, $5
   )
   RETURNING id"
-  values = [@first_name, @last_name, @age, @level, @town, @sessions_id]
+  values = [@first_name, @last_name, @age, @level, @town]
   results = SqlRunner.run(sql, values)
   @id = results.first()['id'].to_i
 end
 
 
 def update
-  sql = 'UPDATE members SET (first_name, last_name, age, level, town, sessions_id) = ($1, $2, $3, $4, $5, $6) WHERE id=$7'
-  values = [@first_name, @last_name, @age, @level, @town, @sessions_id, @id]
+  sql = 'UPDATE members SET (first_name, last_name, age, level, town) = ($1, $2, $3, $4, $5) WHERE id=$6'
+  values = [@first_name, @last_name, @age, @level, @town, @id]
   SqlRunner.run(sql, values)
 end
 
@@ -67,16 +67,16 @@ def self.all
   members = SqlRunner.run(sql)
   return members.map{|member| Member.new(member)}
 end
-
-def self.sessions(sessions_id)
-sql = 'SELECT * FROM members WHERE sessions_id = $1'
-values = [sessions_id]
-member = SqlRunner.run(sql, values)
-members = member.map{|member| Member.new(member)}
-session = members.map{|member| member.first_name}
-session.each { |a| print a, " " }
-
-end
+# 
+# def self.sessions(sessions_id)
+# sql = 'SELECT * FROM members WHERE sessions_id = $1'
+# values = [sessions_id]
+# member = SqlRunner.run(sql, values)
+# members = member.map{|member| Member.new(member)}
+# session = members.map{|member| member.first_name}
+# session.each { |a| print a, " " }
+#
+# end
 
 
 end

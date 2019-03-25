@@ -1,5 +1,6 @@
 DROP TABLE IF EXISTS members;
 DROP TABLE IF EXISTS sessions;
+DROP TABLE IF EXISTS bookings;
 
 
 
@@ -21,6 +22,12 @@ CREATE TABLE members(
   last_name VARCHAR(255),
   age INT4,
   level INT4,
-  town VARCHAR(255),
+  town VARCHAR(255)
+);
+
+CREATE TABLE bookings(
+  id SERIAL8 primary key,
+  instructor_name VARCHAR(255),
+  members_id INT4 REFERENCES members(id) ON DELETE CASCADE,
   sessions_id INT4 REFERENCES sessions(id) ON DELETE CASCADE
 );

@@ -50,18 +50,34 @@ post '/manager/sessions' do # create
 end
 
 
-get '/manager/:id/edit' do #EDIT
+get '/manager/:id/edit' do #edit member
   @member = Member.find(params[:id])
   erb(:"manager/edit")
 end
 
-post '/manager/members/:id' do #UPDATE
+get '/manager/session/:id/edit' do #edit session
+  @session = Session.find(params[:id])
+  erb(:"manager/edit_session")
+end
+
+post '/manager/members/:id' do #update member
   Member.new(params).update
   redirect to '/manager'
 end
 
-post '/manager/:id/delete' do #DELETE
+post '/manager/sessions/:id' do #update session
+  Session.new(params).update
+  redirect to '/manager'
+end
+
+post '/manager/:id/delete' do #delete member
   member = Member.find(params[:id])
   member.delete
   redirect to '/manager/members'
+end
+
+post '/manager/session/:id/delete' do #delete session
+  session = Session.find(params[:id])
+  session.delete
+  redirect to '/manager/sessions'
 end

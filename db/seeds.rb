@@ -71,7 +71,7 @@ Session.delete_all
     'location' => "Water of Leith",
     'distance' => 5,
     'level' => 1,
-    'day' => "Monday",
+    'day' => 20190330,
     'time_of_day' => 1730,
     'price' => 5,
     'max_number' => 10})
@@ -81,7 +81,7 @@ Session.delete_all
     'location' => "Arthur Seat",
     'distance' => 5,
     'level' => 1,
-    'day' => "Tuesday",
+    'day' => 20190331,
     'time_of_day' => 1730,
     'price' => 5,
     'max_number' => 10 })
@@ -91,7 +91,7 @@ Session.delete_all
    'location' => "Water of Leith",
    'distance' => 10,
    'level' => 2,
-   'day' => "Wednesday",
+   'day' => 20190401,
    'time_of_day' => 1800,
    'price' => 7,
    'max_number' =>10
@@ -102,7 +102,7 @@ Session.delete_all
    'location' => "Arthur Seat",
    'distance' => 10,
    'level' => 2,
-   'day' => "Thursday",
+   'day' => 20190402,
    'time_of_day' => 1800,
    'price' => 7,
    'max_number' => 8
@@ -113,7 +113,7 @@ Session.delete_all
    'location' => "Pentlanad hills",
    'distance' => 20,
    'level' => 3,
-   'day' => "Saturday",
+   'day' => 20190403,
    'time_of_day' => 1000,
    'price' => 10,
    'max_number' => 5

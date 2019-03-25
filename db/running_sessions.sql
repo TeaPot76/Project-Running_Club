@@ -9,7 +9,7 @@ CREATE TABLE sessions(
   location VARCHAR(255),
   distance INT4,
   level INT4,
-  day VARCHAR(255),
+  day DATE NOT NULL,
   time_of_day TIME,
   price INT4,
   max_number INT4

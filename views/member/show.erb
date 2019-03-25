@@ -3,6 +3,7 @@
 <p>Member age: <%= @member.age %></p>
 <p>Member level: <%= @member.level %></p>
 <p>Member town: <%= @member.town %></p>
+<p>Member session_id: <%= @sessions_id %></p>
 
 <form method="post" action="/member/<%= @member.id %>/edit">
   <input type="submit" value="Edit Member"/>

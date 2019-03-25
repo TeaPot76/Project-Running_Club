@@ -22,8 +22,8 @@ get '/manager/members/new' do # new member form
   erb( :"manager/newmember")
 end
 
-get '/manager/new' do # new session form
-  erb( :"manager/new")
+get '/manager/sessions/new' do # new session form
+  erb( :"manager/new_session")
 end
 
 get '/manager/session/:id' do # show
@@ -41,4 +41,27 @@ post '/manager/members' do # create
   @member = Member.new( params )
   @member.save()
   erb( :"manager/createmember")
+end
+
+post '/manager/sessions' do # create
+  @session = Session.new( params )
+  @session.save()
+  erb( :"manager/create")
+end
+
+
+get '/manager/:id/edit' do #EDIT
+  @member = Member.find(params[:id])
+  erb(:"manager/edit")
+end
+
+post '/manager/members/:id' do #UPDATE
+  Member.new(params).update
+  redirect to '/manager'
+end
+
+post '/manager/:id/delete' do #DELETE
+  member = Member.find(params[:id])
+  member.delete
+  redirect to '/manager/members'
 end

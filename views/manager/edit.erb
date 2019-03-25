@@ -1,0 +1,46 @@
+<p> this is edit </p>
+
+  <form method="post" action="/manager/members/<%=@member.id%>">
+     <ul>
+       <li>
+         <label for="first-name-field">First Name:</label>
+         <input type="text" name="first_name" id="first-name-field"
+         value= "<%= @member.first_name%>"/>
+       </li>
+       <li>
+         <label for="last-name-field">Last Name:</label>
+         <input type="text" name="last_name" id="last-name-field"
+         value= "<%= @member.last_name%>"/>
+       </li>
+       <li>
+         <label for="age">Age:</label>
+         <input type="number" name="age" id="age-field"
+         value= "<%= @member.age%>"/>
+       </li>
+       <li>
+         <label for="level">Level:</label>
+         <select name="level" id="level">
+           <option value="1"<%= "selected" if @member.level == "1" %> >1</option>
+           <option value="2"<%= "selected" if @member.level == "2" %>>2</option>
+           <option value="3"<%= "selected" if @member.level == "3" %>>3</option>
+         </select>
+       </li>
+       <li>
+         <label for="town">Town:</label>
+         <input type="text" name="town" id="town-field"
+         value= "<%= @member.town%>"
+         />
+       </li>
+       <li>
+         <input type="submit" value="Confirm Entry"/>
+       </li>
+       <li>
+         <label for="sessions_id">Session_id:</label>
+         <input type="number" name="sessions_id" id="sessions_id-field"
+         value= "<%= @member.sessions_id%>"/>
+       </li>
+       <li>
+         <input type="submit" value="Confirm Entry"/>
+       </li>
+     </ul>
+   </form>

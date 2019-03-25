@@ -5,6 +5,7 @@
 <p>Member age: <%= @member.age %></p>
 <p>Member level: <%= @member.level %></p>
 <p>Member town: <%= @member.town %></p>
+<p>Member session_id: <%= @member.sessions_id %></p>
 <p><a href="/manager/<%= @member.id %>/edit">Edit Member</a></p>
 <form method="post" action="/manager/<%= @member.id %>/delete">
   <input type="submit" value="Delete Member"/>

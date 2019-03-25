@@ -2,8 +2,9 @@ require_relative( "../models/session.rb" )
 require_relative( "../models/member.rb" )
 
 require("pry-byebug")
-
-
+ # 
+ # Member.delete_all
+ # Session.delete_all
   session1 = Session.new({
     'name' => "Beginner road",
     'location' => "Water of Leith",
@@ -58,7 +59,7 @@ require("pry-byebug")
     })
 
     # session5.location = "Pentland Hills"
-    # session5.update
+   # #  # session5.update
    # session1.save
    # session2.save
    # session3.save
@@ -70,7 +71,8 @@ require("pry-byebug")
    'last_name' => 'Cooper',
     'age' => 52,
     'level' => 1,
-    'town' => 'Edinburgh'
+    'town' => 'Edinburgh',
+    'sessions_id' => session1.id
     })
 
   member2 = Member.new({
@@ -78,45 +80,51 @@ require("pry-byebug")
     'last_name' => 'Harris',
     'age' => 48,
     'level' => 2,
-    'town' => 'Edinburgh'})
+    'town' => 'Edinburgh',
+    'sessions_id' => session3.id})
 
   member3 = Member.new({
     'first_name' => 'Alice',
     'last_name' => 'Chains',
     'age' => 34,
     'level' => 2,
-    'town' => 'Edinburgh'})
+    'town' => 'Edinburgh',
+    'sessions_id' => session3.id})
 
   member4 = Member.new({
     'first_name' => 'Mandy',
     'last_name' => 'Hall',
     'age' => 30,
     'level' => 1,
-    'town' => 'Edinburgh'})
+    'town' => 'Edinburgh',
+    'sessions_id' => session1.id})
 
   member5 = Member.new({
     'first_name' => 'Angie',
     'last_name' => 'Will',
     'age' => 30,
     'level' => 1,
-    'town' => 'Edinburgh'})
+    'town' => 'Edinburgh',
+    'sessions_id' => session2.id})
 
   member6 = Member.new({
     'first_name' => 'Bil',
     'last_name' => 'Ruby',
     'age' => 35,
     'level' => 2,
-    'town' => 'Edinburgh'})
+    'town' => 'Edinburgh',
+    'sessions_id' => session2.id})
 
   member7 = Member.new({
     'first_name' => 'Anna',
     'last_name' => 'Holland',
     'age' => 27,
     'level' => 3,
-    'town' => 'Edinburgh'})
+    'town' => 'Edinburgh',
+    'sessions_id' => session5.id})
 
 
-       #
+     #
      # member1.save
      # member2.save
      # member3.save

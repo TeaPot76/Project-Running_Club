@@ -19,6 +19,7 @@ end
 end
 
 get '/manager/members/new' do # new member form
+  @sessions = Session.all
   erb( :"manager/newmember")
 end
 
@@ -51,6 +52,7 @@ end
 
 
 get '/manager/:id/edit' do #edit member
+  @sessions = Session.all
   @member = Member.find(params[:id])
   erb(:"manager/edit")
 end

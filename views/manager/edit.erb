@@ -36,8 +36,18 @@
        </li>
        <li>
          <label for="sessions_id">Session_id:</label>
-         <input type="number" name="sessions_id" id="sessions_id-field"
-         value= "<%= @member.sessions_id%>"/>
+
+       <select name="sessions_id" id="sessions_id" selected="<%= @member.sessions_id%>">
+         <% @sessions.each do |session| %>
+           <% if session.id == @member.sessions_id %>
+             <option value=<%= session.id %> selected><%= session.name %></option>
+           <% else %>
+             <option value=<%= session.id %>><%= session.name %></option>
+           <% end %>
+         <% end %>
+       </select>
+
+
        </li>
        <li>
          <input type="submit" value="Confirm Entry"/>

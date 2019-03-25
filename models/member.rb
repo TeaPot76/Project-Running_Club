@@ -68,11 +68,14 @@ def self.all
   return members.map{|member| Member.new(member)}
 end
 
-def self.all_sessions(session_id)
+def self.sessions(sessions_id)
 sql = 'SELECT * FROM members WHERE sessions_id = $1'
-values = [session_id]
-p sessions = SqlRunner.run(sql)
-# return Session.new(sessions.first)
+values = [sessions_id]
+member = SqlRunner.run(sql, values)
+members = member.map{|member| Member.new(member)}
+session = members.map{|member| member.first_name}
+session.each { |a| print a, " " }
+
 end
 
 

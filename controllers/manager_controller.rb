@@ -83,3 +83,10 @@ post '/manager/session/:id/delete' do #delete session
   session.delete
   redirect to '/manager/sessions'
 end
+
+get '/manager/sessions/members' do
+   @sessions = Session.all
+    @members =  Member.all
+   Member.sessions(params[:sessions_id])
+  erb (:"manager/session_member")
+ end

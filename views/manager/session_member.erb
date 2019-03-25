@@ -1,14 +1,50 @@
-
+<!--
 <p> Members per session:  </p>
 
-<% @members.each do |member| %>
+ @members.each do |member|
   <p>
     <a href="/manager/sessions/member
-      <% member.id %>">
-      <% member.first_name %>
-      <%  member.last_name%>
-      <p> Session_id <%=  member.sessions_id%></p>
-      <%= Member.sessions(member.sessions_id)%>
+        member.id %>"> %>
+       member.first_name %>
+        member.last_name%>
+      Session_id   member.sessions_id
+       Member.sessions(member.sessions_id)
     </a>
   </p>
-<%end%>
+
+
+
+
+<li>
+  <label for="sessions_id">Session_id:</label>
+
+  <select name="session.id" id="sessions_id">
+   session in @sessions %>
+      <option value=session.id %>> session.name %></option>
+
+</select>
+  <!-- <input type="number" name="sessions_id" id="sessions_id-field"/> -->
+<!-- </li>
+<li>
+  <input type="submit" value="Confirm Entry"/>
+</li> -->
+
+
+<li>
+  <label for="sessions_id">Session_id:</label>
+
+<select name="booking.session_id" id="sessions_id" selected="<%= @booking.sessions_id%>">
+  <% @bookings.each do |booking| %>
+    <% if session.id == @booking.sessions_id %>
+      <option value=<%= session.id %> selected><%= session.name %></option>
+    <% else %>
+      <option value=<%= session.id %>><%= session.name %></option>
+    <% end %>
+  <% end %>
+</select>
+
+
+</li>
+<li>
+  <input type="submit" value="Confirm Entry"/>
+</li>

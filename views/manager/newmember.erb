@@ -27,18 +27,6 @@
     <li>
       <input type="submit" value="Confirm Entry"/>
     </li>
-    <li>
-      <label for="sessions_id">Session_id:</label>
-
-      <select name="sessions_id" id="sessions_id">
-      <% for session in @sessions %>
-          <option value=<%=session.id %>><%= session.name %></option>
-      <% end %>
-    </select>
-      <!-- <input type="number" name="sessions_id" id="sessions_id-field"/> -->
-    </li>
-    <li>
-      <input type="submit" value="Confirm Entry"/>
-    </li>
+    
   </ul>
 </form>

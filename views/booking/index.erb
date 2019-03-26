@@ -2,28 +2,24 @@
 
 <p>
   Choose one of listed below bookings
-</p>
+
 
 <% @bookings.each do |booking| %>
 
-    <a href="/manager/bookings/<%= booking.id %>"> <p>Instructor:<%= booking.instructor_name %>
 
-      Session id: <%=booking.sessions_id%> Member id: <%=booking.members_id%></a> </p>
-
-<% end %>
-
-
-<% @sessions.each do |session| %>
-<p>
-  <a href="/manager/session/<%= session.id %>"><%= session.name %>
-    <%=session.distance%></a>
-</p>
-
-<% end%>
-
-
-  <% @members.each do |member| %>
- <p> <a href="/manager/member/<%= member.id %>"><%= member.first_name %>
-   <%=member.last_name%></a>
-</p>
- <% end %>
+<a href="/manager/bookings/<%= booking.id %>"> <p>Instructor:<%= booking.instructor_name %>
+Session id: <%=booking.sessions_id%> Member id: <%=booking.members_id%></a> </p>
+     <% @sessions.each do |session| %>
+     <% if session.id == booking.sessions_id %>
+        <option value=<%= session.id %> selected><%= session.name %></option>
+    <% end %>
+    <% end %>
+     <% @members.each do |member| %>
+     <% if member.id == booking.members_id %>
+        <option value=<%= member.id %> selected><%= member.first_name %>
+          <%= member.last_name %></option>
+      <% else %>
+        <option value=<%= member.id %>><% member.first_name %></option>
+      <% end %>
+    <% end %>
+    <% end %>

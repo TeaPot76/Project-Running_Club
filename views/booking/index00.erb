@@ -1,0 +1,14 @@
+
+  <a href="/manager/bookings/stats">All bookings </a>
+<h1>Session: <%= @session.name.capitalize %></h1>
+
+<p>Level: <%= @session.level %></p>
+<p>Session max_number: <%= @session.max_number %></p>
+
+<h3>Members:</h3>
+
+<ul>
+  <% @session.members.each do |member| %>
+  <li><%= member.first_name %> <%= member.last_name %></li>
+  <% end %>
+</ul>

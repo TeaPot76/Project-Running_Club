@@ -6,95 +6,57 @@ require_relative('../models/booking')
 
 also_reload('../models/*')
 
-get '/manager/sessions/members' do
+get '/manager/bookings' do
   @bookings = Booking.all
   @members = Member.all
   @sessions = Session.all
   erb (:"booking/index")
 end
 
-get '/manager/sessions' do
-  @bookings = Booking.all
-  @member = Member.all
-  @sessions = Session.all
-  erb(:"bookings/show")
+
+get '/manager/bookings/new' do # new session form
+  erb( :"booking/new")
+end
+
+get '/manager/bookings/:id' do
+  # show
+    @booking = Booking.find( params[:id] )
+    erb( :"booking/show" )
 end
 
 
+post '/manager/bookings/' do # create
+  @booking= Booking.new( params )
+  @booking.save()
+  erb( :"booking/create")
+end
 
-#
-#
-#   get '/manager/members' do
-#   @members = Member.all
-#   erb(:"manager/members")
-# end
-#
-# get '/manager/members/new' do # new member form
+
+get '/manager/bookings/:id/edit' do #edit booking
+
+  @booking = Booking.find(params[:id])
+  erb(:"booking/edit")
+end
+
+post '/manager/bookings/:id' do #update booking
+  Booking.new(params).update
+  redirect to '/manager/bookings'
+end
+
+post '/manager/bookings/:id/delete' do #delete member
+  @booking = Booking.find(params[:id])
+  @booking.delete
+  redirect to '/manager/bookings'
+end
+
+# get '/manager/sessions' do
+#   @bookings = Booking.all
+#   @member = Member.all
 #   @sessions = Session.all
-#   erb( :"manager/newmember")
+#   erb(:"bookings/show")
 # end
 
-# get '/manager/sessions/new' do # new session form
-#   erb( :"manager/new_session")
-# end
-#
-# get '/manager/session/:id' do # show
-#   @session = Session.find( params[:id] )
-#   erb( :"manager/show_session" )
-# end
-#
-#
-# get '/manager/member/:id' do # show
-#   @member = Member.find( params[:id] )
-#   erb( :"manager/show" )
-# end
-#
-# post '/manager/members' do # create
-#   @member = Member.new( params )
-#   @member.save()
-#   erb( :"manager/createmember")
-# end
-#
-# post '/manager/sessions' do # create
-#   @session = Session.new( params )
-#   @session.save()
-#   erb( :"manager/create")
-# end
-#
-#
-# get '/manager/:id/edit' do #edit member
-#   @sessions = Session.all
-#   @member = Member.find(params[:id])
-#   erb(:"manager/edit")
-# end
-#
-# get '/manager/session/:id/edit' do #edit session
-#   @session = Session.find(params[:id])
-#   erb(:"manager/edit_session")
-# end
-#
-# post '/manager/members/:id' do #update member
-#   Member.new(params).update
-#   redirect to '/manager'
-# end
-#
-# post '/manager/sessions/:id' do #update session
-#   Session.new(params).update
-#   redirect to '/manager'
-# end
-#
-# post '/manager/:id/delete' do #delete member
-#   member = Member.find(params[:id])
-#   member.delete
-#   redirect to '/manager/members'
-# end
-#
-# post '/manager/session/:id/delete' do #delete session
-#   session = Session.find(params[:id])
-#   session.delete
-#   redirect to '/manager/sessions'
-# end
-#
+
 # get '/manager/sessions/members' do
 #    @sessions = Session.all
 #     @members =  Member.all

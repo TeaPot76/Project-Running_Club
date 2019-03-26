@@ -1,13 +1,9 @@
 
+<p>Booking instructor name: <%=@booking.instructor_name%></p>
+<p>Session id: <%=@booking.sessions_id%></p>
+<p>Member id: <%=@booking.members_id%></p>
 
-<a href="/manager/member/<%=booking.id %>">
-<p>Booking instructor name: <%= @booking.instructor_name%></p>
-<p>Session id: <%= @booking.sessions_id %></p>
-<p>Member id: <%= @booking.members_id %></p>
-<p>Member name: <%= @member.first_name %></p>
-<p>Session name: <%= @session.name %></p>
-
-<p><a href="/manager/<%= @booking.id %>/edit">Edit Booking</a></p>
-<form method="post" action="/manager/<%= booking.id %>/delete">
+<p><a href="/manager/bookings/<%= @booking.id %>/edit">Edit Booking</a></p>
+<form method="post" action="/manager/bookings/<%=@booking.id%>/delete">
   <input type="submit" value="Delete Booking"/>
 </form>

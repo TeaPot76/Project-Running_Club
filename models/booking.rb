@@ -36,6 +36,22 @@ class Booking
    SqlRunner.run(sql, values)
   end
 
+  def member()
+    sql = "SELECT * FROM members
+    WHERE id = $1"
+    values = [@members_id]
+    results = SqlRunner.run( sql, values )
+    return Member.new( results.first )
+  end
+
+  def session()
+    sql = 'SELECT * FROM sessions
+    WHERE id = $1'
+    values = [@sessions_id]
+    results = SqlRunner.run( sql, values )
+    return Session.new( results.first )
+  end
+
  def delete
    sql = 'DELETE FROM bookings WHERE id = $1'
    values = [@id]
@@ -60,6 +76,7 @@ class Booking
    bookings = SqlRunner.run(sql)
    return bookings.map{|booking| Booking.new(booking)}
  end
+
 
 
 end

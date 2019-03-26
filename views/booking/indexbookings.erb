@@ -1,0 +1,22 @@
+<h2>All bookings </h2>
+
+
+<p <a href="/manager/bookings/<%= @id %>"></a>
+</p>
+
+<ul>
+  <% for booking in @bookings %>
+  <p <a href="/manager/bookings/<%= @id %>">
+
+    <a href="/manager/bookings/<%= booking.id %>"> <p>Instructor:<%= booking.instructor_name %>
+    Session id: <%=booking.sessions_id%> Member id: <%=booking.members_id%></a> </p>
+
+  <p>
+    <%= booking.session.name %>  <%= booking.member.first_name %>
+
+
+    </p>
+
+  <% end %>
+
+</ul>

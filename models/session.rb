@@ -66,5 +66,19 @@ class Session
    return sessions.map{|session| Session.new(session)}
  end
 
+ def members()
+   sql = 'SELECT * FROM members INNER JOIN bookings ON bookings.members_id = members.id WHERE bookings.sessions_id = $1'
+   values = [@id]
+   results = SqlRunner.run(sql, values)
+   return results.map{|member| Member.new(member)}
+ end
+
+#  def victims
+#   sql = "SELECT v.* FROM victims v INNER JOIN bitings b ON b.victim_id = v.id WHERE b.zombie_id = $1;"
+#   values = [@id]
+#   results = SqlRunner.run(sql, values)
+#   return results.map { |victim| Victim.new(victim) }
+#
+# end
 
 end

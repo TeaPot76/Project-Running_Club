@@ -30,6 +30,30 @@
 </li> -->
 
 
+          <li>
+            <label for="sessions_id">Session Name:</label>
+
+        <select name="booking.sessions_id" id="sessions_id" selected="<%= @booking.sessions_id%>">
+            <% @bookings.each do |booking| %>
+              <% if session.id == @booking.sessions_id %>
+                <option value=<%= session.id %> selected><%= session.name %></option>
+              <% else %>
+                <option value=<%= session.id %>><%= session.name %></option>
+              <% end %>
+            <% end %>
+          </select>
+
+
+          </li>
+          <a href="/manager/bookings/<%= booking.id %>"> <p>Instructor:<%= booking.instructor_name %>
+
+           Session id: <%=booking.sessions_id%> Member id: <%=booking.members_id%></a> </p>
+
+
+
+
+
+
 <li>
   <label for="sessions_id">Session_id:</label>
 

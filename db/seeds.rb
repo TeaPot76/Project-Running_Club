@@ -3,9 +3,10 @@ require_relative( "../models/member.rb" )
 require_relative( "../models/booking.rb" )
 
 require("pry-byebug")
- #
- # Member.delete_all
- # Session.delete_all
+
+ Member.delete_all
+ Session.delete_all
+ Booking.delete_all
   session1 = Session.new({
     'name' => "Beginner road",
     'location' => "Water of Leith",
@@ -61,11 +62,11 @@ require("pry-byebug")
 
     # session5.location = "Pentland Hills"
    # #  # session5.update
-   # session1.save
-   # session2.save
-   # session3.save
-   # session4.save
-   # session5.save
+   session1.save
+   session2.save
+   session3.save
+   session4.save
+   session5.save
 
   member1 = Member.new({
    'first_name' => 'Alice',
@@ -119,13 +120,13 @@ require("pry-byebug")
 
 
      # #
-     # member1.save
-     # member2.save
-     # member3.save
-     # member4.save
-     # member5.save
-     # member6.save
-     # member7.save
+     member1.save
+     member2.save
+     member3.save
+     member4.save
+     member5.save
+     member6.save
+     member7.save
 
   booking1 = Booking.new({
     'instructor_name' => 'Eddie',
@@ -157,12 +158,12 @@ require("pry-byebug")
       'members_id' => member7.id,
       'sessions_id' => session5.id})
   #
-  # booking1.save
-  # booking2.save
-  # booking3.save
-  # booking4.save
-  # booking5.save
-  # booking6.save
+  booking1.save
+  booking2.save
+  booking3.save
+  booking4.save
+  booking5.save
+  booking6.save
 
 
    binding.pry

@@ -15,6 +15,10 @@ end
 
 
 get '/manager/bookings/new' do # new session form
+
+  @sessions = Session.all
+  @members = Member.all
+
   erb( :"booking/new")
 end
 
@@ -25,7 +29,9 @@ get '/manager/bookings/:id' do
 end
 
 
-post '/manager/bookings/' do # create
+post '/manager/bookings' do # create
+  @sessions = Session.all
+  @members = Member.all
   @booking= Booking.new( params )
   @booking.save()
   erb( :"booking/create")

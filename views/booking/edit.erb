@@ -8,6 +8,14 @@
       value= "<%= @booking.instructor_name%>"/>
     </li>
     <li>
+
+      <label for="sessions_id-field">Select Session:</label>
+       <select name="sessions_id" id="sessions_id">
+         <% @sessions.each do |session| %>
+             <option value=<%= session.id %>><%= session.name %></option>
+         <% end %>
+       </select>
+
       <label for="sessions_id-field">Session Name:</label>
       <input type="number" name="sessions_id" id="sessions_id-field"
       value= "<%= @booking.sessions_id%>"/>

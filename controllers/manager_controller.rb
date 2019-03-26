@@ -15,6 +15,7 @@ end
 
   get '/manager/members' do
   @members = Member.all
+  @sessions = Session.all
   erb(:"manager/members")
 end
 

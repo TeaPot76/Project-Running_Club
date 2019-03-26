@@ -10,14 +10,24 @@ get '/manager/bookings' do
   @bookings = Booking.all
   @members = Member.all
   @sessions = Session.all
-  erb (:"booking/index")
+  erb (:"booking/index0")
 end
+
+
+get '/manager/bookings/stats/:id' do
+  @session = Session.find(params['id'])
+  @bookings = Booking.all
+  @members = Member.all
+  @sessions = Session.all
+  erb (:"booking/index00")
+end
+
 get '/manager/bookings/stats' do
 
   @bookings = Booking.all
   @members = Member.all
   @sessions = Session.all
-  erb (:"booking/index0")
+  erb (:"booking/index")
 end
 
 get '/manager/bookings/stats/:id' do

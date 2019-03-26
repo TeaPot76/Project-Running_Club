@@ -1,12 +1,24 @@
-<h1>Running Club Sessions</h1>
-<p>
-  Choose one of listed below session
-</p>
-<% for session in @sessions %>
-  <ul>
-    <li>
-      <a href="/manager/session/<%= session.id %>"><%= session.name %></a>
-    </li>
+  <a href="/manager"> Index </a>
 
-  </ul>
+<h1>Running Club Sessions</h1>
+<h3>
+  Choose one of listed below session
+</h3>
+
+
+<table>
+  <tr>
+    <th>Session name</th>
+    <th></th>
+    <th>Location</th>
+    <th></th>
+ <tr> <% for session in @sessions %></tr>
+ <td><h4>
+      <a href="/manager/session/<%= session.id %>"><%= session.name %></a><h4></td>
+       <td>*   *</td>
+        <td><p><%=session.location%></p></td>
+
+
 <% end %>
+</tr>
+</table>

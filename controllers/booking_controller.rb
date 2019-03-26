@@ -10,7 +10,7 @@ get '/manager/bookings' do
   @bookings = Booking.all
   @members = Member.all
   @sessions = Session.all
-  erb (:"booking/indexbookings")
+  erb (:"booking/index")
 end
 get '/manager/bookings/stats' do
   @bookings = Booking.all

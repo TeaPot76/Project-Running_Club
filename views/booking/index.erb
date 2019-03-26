@@ -1,21 +1,17 @@
-<p>All bookings </p>
 
-<ul>
-<p>
-  Choose one of listed below bookings
-   <% for booking in @bookings %>
-
-   <a href="/manager/bookings/<%= booking.id %>"> <li> <%= booking.session.name%></li>
-  </a>
-
+<% for booking in @bookings %>
 <% end%>
-</ul>
-<h2> All bookings </h2>
-<a href="/manager/bookings/<%= booking.id %>"> <% for member in @members %>
-<%= member.first_name %> <%=member.last_name%>
-
-  <p>Session: <%member.sessions %> <% member.sessions.each do |session| %>
-    <%= session.name %></p>
-    <% end %>
+<h2> <a href="/manager/bookings/<%= booking.id %>"> All bookings </h2></a>
+<ul>
+<% for session in @sessions %>
+<h3>Session name: <%= session.name %> </h3><h5>:::
+  Distance: <%=session.distance%> :::
+    Location: <%=session.location%>
+    :::
+      Instructor: <%=booking.instructor_name%></h5>
+ <h5>Members: </h5><p><%session.members %> <% session.members.each do |member| %>
+  <li> <%= member.first_name %>  <%= member.last_name %></li>
+  <% end %>
 <%end%>
-</a>
+</p>
+</ul>

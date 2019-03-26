@@ -1,0 +1,17 @@
+
+<h2> All bookings </h2>
+<ul>
+  <li>
+       <% for booking in @bookings %>
+       <%end%>
+<a href="/manager/bookings/<%= booking.id %>"> <% for member in @members %>
+<%= member.first_name %> <%=member.last_name%> </li>
+
+  <li><p>Session: <%member.sessions %> <% member.sessions.each do |session| %>
+    <%= session.name %></p></li>
+    <% end %>
+<%end%>
+
+</a>
+
+</ul>

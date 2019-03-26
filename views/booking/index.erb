@@ -1,25 +1,21 @@
 <p>All bookings </p>
 
+<ul>
 <p>
   Choose one of listed below bookings
+   <% for booking in @bookings %>
 
+   <a href="/manager/bookings/<%= booking.id %>"> <li> <%= booking.session.name%></li>
+  </a>
 
-<% @bookings.each do |booking| %>
+<% end%>
+</ul>
+<h2> All bookings </h2>
+<a href="/manager/bookings/<%= booking.id %>"> <% for member in @members %>
+<%= member.first_name %> <%=member.last_name%>
 
-
-<a href="/manager/bookings/<%= booking.id %>"> <p>Instructor:<%= booking.instructor_name %>
-Session id: <%=booking.sessions_id%> Member id: <%=booking.members_id%></a> </p>
-     <% @sessions.each do |session| %>
-     <% if session.id == booking.sessions_id %>
-        <option value=<%= session.id %> selected><%= session.name %></option>
+  <p>Session: <%member.sessions %> <% member.sessions.each do |session| %>
+    <%= session.name %></p>
     <% end %>
-    <% end %>
-     <% @members.each do |member| %>
-     <% if member.id == booking.members_id %>
-        <option value=<%= member.id %> selected><%= member.first_name %>
-          <%= member.last_name %></option>
-      <% else %>
-        <option value=<%= member.id %>><% member.first_name %></option>
-      <% end %>
-    <% end %>
-    <% end %>
+<%end%>
+</a>

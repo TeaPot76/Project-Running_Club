@@ -24,6 +24,8 @@ end
 
 get '/manager/bookings/:id' do
   # show
+    @sessions = Session.all
+    @members = Member.all
     @booking = Booking.find( params[:id] )
     erb( :"booking/show" )
 end
@@ -39,7 +41,8 @@ end
 
 
 get '/manager/bookings/:id/edit' do #edit booking
-
+  @sessions = Session.all
+  @members = Member.all
   @booking = Booking.find(params[:id])
   erb(:"booking/edit")
 end

@@ -1,31 +1,27 @@
-  <a href="/manager"> Index </a>
-
-<h1>Sessions</h1>
-
+<div class ="button1"> <a href="/manager"> Index </a> </div>
+<div class= "indexheading">
+<h2>Current Sessions</h2>
+</div>
+<div class = "indextable2">
 <table>
   <tr>
-    <th>Name</th>
-    <th></th>
-    <th>Instructor</th>
-    <th></th>
-    <th>Location</th>
-    <th></th>
-    <th>Distance</th>
-    <th></th>
-    <th>Level</th>
+    <th><div class = "button6">Name</div></th>
+    <th><div class = "button6">Instructor</div></th>
+    <th><div class = "button6">Location</div></th>
+    <th><div class = "button6">Distance<div></th>
+    <th><div class = "button6">Level<div></th>
   </tr>
   <% for session in @sessions %>
   <tr>
-    <td><a href="/manager/bookings/stats/<%= session.id %>">
-    <%= session.name %></a></td>
-    <td>|</td>
+    <td><div class = "button5"><a href="/manager/bookings/stats/<%= session.id %>">
+    <%= session.name %></a></div></td>
      <%for booking in @bookings%>
      <%end%>
-      <td><%= booking.instructor_name%></td>
-        <td>|</td>
-    <td><%= session.location %></td>
-      <td>|</td><td><%= session.distance%></td>
-      <td>|</td><td><%= session.level%></td>
+      <td><div class = "button5"><%= booking.instructor_name%></div></td>
+     <td><div class = "button5"><%= session.location %></div></td>
+      <td><div class = "button5"><%= session.distance%></div></td>
+      <td><div class = "button5"><%= session.level%></div></td>
   </tr>
   <% end %>
 </table>
+</div>

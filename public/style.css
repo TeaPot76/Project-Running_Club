@@ -23,6 +23,10 @@ background-size: cover;
   padding-bottom: 250px;
 }
 
+nav {
+  padding-bottom: 20px;
+  background-color: silver;
+}
 
 
 footer {
@@ -39,21 +43,139 @@ a:hover {
   color: darkred;
 }
 
-.button {
-  background-color: gray; /* Green */
-  border: 2px solid black;
 
-  color: white;
-  padding: 10px;
+.button {
+  display: inline-block;
+  padding: 15px 20px;
+  font-size: 20px;
+  cursor: pointer;
   text-align: center;
   text-decoration: none;
+  outline: none;
+  color: black;
+  background-color: grey;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button1 {
+  background-color: gray; /* Green */
+  border: 2px solid black;
+  color: white;
+  padding: 3px;
+  text-align: center;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: 15px;
   cursor: pointer;
   border-radius: 15%;
 }
 
+
+
+.button2 {
+  background-color: gray; /* Green */
+  border: 2px solid black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 15%;
+  width: 250px;
+}
+.button2:hover {
+  background-color: green;
+  color: white;
+}
+
+.button3 {
+background-color: silver;
+border: none;
+color: black;
+padding: 16px 32px;
+text-align: center;
+font-size: 16px;
+margin: 4px 2px;
+opacity: 0.9;
+transition: 0.3s;
+cursor: pointer;
+width: 250px;
+}
+
+.button3:hover {
+  background-color: lightgreen;
+  color: white;
+}
+.button4 {
+background-color: grey;
+font-weight: bold;
+border: black;
+color: black;
+padding: 10px 20px;
+text-align: center;
+font-size: 15px;
+margin: 2px 2px;
+opacity: 0.6;
+transition: 0.3s;
+display: inline-block;
+cursor: pointer;
+width: 250px;
+}
+
+.button6 {
+background-color: grey;
+font-weight: bold;
+border: black;
+color: black;
+padding: 10px 20px;
+text-align: center;
+font-size: 15px;
+margin: 2px 2px;
+opacity: 0.6;
+transition: 0.3s;
+display: inline-block;
+cursor: pointer;
+width: 160px;
+}
+
+.button5 {
+  background-color: grey ;
+  border: 2px solid black;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid grey;
+  width: 160px;
+}
+
+.button5:hover {
+  background-color: green;
+  color: white;
+}
+
+.indextable {
+  padding-left: 200px;
+}
+.indextable2 {
+  padding-left: 10px;
+}
+.indexheading {
+padding-left: 200px;
+
+}
 #main {
   width: 220px;
   display: flex;

@@ -1,30 +1,35 @@
-  <a href="/manager"> Index </a>
-
-<h1>Running Club Members</h1>
-
-<p>
+<div class ="button1"> <a href="/manager"> Index </a> </div>
+<div class ="indexheading">
+<h2>Running Club Members</h2>
+<h3>
   Select member name to edit or delete details:
-</p>
+</h3></div>
+<div class="indextable">
 <table>
   <tr>
-    <th>Member:</th>
-    <th></th>
-    <th>Session:</th>
-    <th></th>
+  <th><div class="button4">Member</div></th>
 
-    
+    <th> <div class="button4">Session</div></th>
+
+<tr></tr>
+
   <tr> <% @members.each do |member| %></tr>
-  <td>  <a href="/manager/member/<%= member.id %>">
+
+  <td> <div class="button3"> <a href="/manager/member/<%= member.id %>">
+
       <%= member.first_name %>
-      <%=member.last_name%></a></td>
-      <td>||</td>
-       <td> <%member.sessions %>
+      <%=member.last_name%></a>  </div></td>
+      
+       <td> <div class="button3"><%member.sessions %>
          <% member.sessions.each do |session| %>
         <%= session.name %>
-        <% end %></td>
+        <% end %>
+      </div>
+      </td>
 
 
     <%end%>
 
 </tr>
 </table>
+</div>

@@ -10,6 +10,7 @@ end
 
 get '/manager/sessions' do
   @sessions = Session.all
+  @session_by_day = Session.all_by_day
   erb(:"manager/sessions")
 end
 

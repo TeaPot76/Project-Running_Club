@@ -66,6 +66,12 @@ class Session
    return sessions.map{|session| Session.new(session)}
  end
 
+ def self.all_by_day
+   sql = 'SELECT * FROM sessions ORDER BY day'
+   sessions = SqlRunner.run(sql)
+   return sessions.map{|session| Session.new(session)}
+ end
+
  def members()
    sql = 'SELECT * FROM members INNER JOIN bookings ON bookings.members_id = members.id WHERE bookings.sessions_id = $1'
    values = [@id]

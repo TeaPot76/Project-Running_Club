@@ -79,12 +79,29 @@ class Session
    return results.map{|member| Member.new(member)}
  end
 
-#  def victims
-#   sql = "SELECT v.* FROM victims v INNER JOIN bitings b ON b.victim_id = v.id WHERE b.zombie_id = $1;"
-#   values = [@id]
-#   results = SqlRunner.run(sql, values)
-#   return results.map { |victim| Victim.new(victim) }
-#
-# end
+
+
+def number_of_members()
+  return members().length
+end
+
+def allowed_members
+    if number_of_members() >= @max_number
+    return "no spaces on the session"
+    else return "add member to the booking"
+end
+end
+
+def availability(id)
+  sql = 'SELECT * FROM members INNER JOIN bookings ON bookings.members_id = members.id WHERE bookings.sessions_id = $1'
+  values = [id]
+  results = SqlRunner.run(sql, values)
+   result = results.map{|member| Member.new(member)}.length
+   if result <= @max_number
+  
+     return @max_number -= result
+   else return "not allowed more people"
+  end
+end
 
 end

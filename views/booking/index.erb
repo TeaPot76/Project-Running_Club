@@ -13,7 +13,7 @@
 <td>  <div class = "button7"> <h5>
   Distance: <%=session.distance%> </h5></div></td>
   <td><div class = "button7" ><h5>Location: <%=session.location%></div></td>
-    <td><div class = "button7" ><h5> Instructor: <%=booking.instructor_name%></h5></div>
+    <td><div class = "button7" ><h5> Session availability: <%=session.availability(session.id)%></h5></div>
     </td>
     <td> <div class = "button9" >
  <h5>Members: </h5><p><%session.members %> <% session.members.each do |member| %>

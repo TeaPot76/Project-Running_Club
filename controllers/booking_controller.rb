@@ -60,11 +60,9 @@ end
 
 
 post '/manager/bookings' do # create
-  @sessions = Session.all
-  @members = Member.all
-  @booking= Booking.new( params )
-  @booking.save()
-  erb( :"booking/create")
+    @booking= Booking.new( params )
+    @booking.save()
+    erb( :"booking/create")
 end
 
 

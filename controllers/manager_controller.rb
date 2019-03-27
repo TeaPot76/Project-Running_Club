@@ -48,7 +48,7 @@ post '/manager/members' do # create
 end
 
 post '/manager/sessions' do # create
-  # @session = Session.new( params )
+ @session = Session.new( params )
   @session.save()
   erb( :"manager/create")
 end

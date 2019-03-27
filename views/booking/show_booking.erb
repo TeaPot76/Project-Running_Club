@@ -1,0 +1,11 @@
+<div class ="button1"> <a href="/manager"> Index </a> </div>
+
+<p>Booking_id: <%= @booking.id %></p>
+<p>Booking session_id: <%= @booking.sessions_id %></p>
+<p>Member member_id <%= @booking.members_id %></p>
+
+
+<p><a href="/manager/bookings/<%= @booking.id %>/edit">Edit Booking</a></p>
+<form method="post" action="/manager/bookings/<%= @booking.id %>/delete">
+  <input type="submit" value="Delete booking"/>
+</form>

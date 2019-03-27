@@ -30,13 +30,13 @@ get '/manager/bookings/stats' do
   erb (:"booking/index")
 end
 
-get '/manager/bookings/stats/:id' do
-  @session = Session.find(params['id'])
-  @bookings = Booking.all
-  @members = Member.all
-  @sessions = Session.all
-  erb (:"booking/index00")
-end
+# get '/manager/bookings/stats/:id' do
+#   @session = Session.find(params['id'])
+#   @bookings = Booking.all
+#   @members = Member.all
+#   @sessions = Session.all
+#   erb (:"booking/index00")
+# end
 
 get '/manager/bookings/new' do # new session form
 
@@ -46,12 +46,17 @@ get '/manager/bookings/new' do # new session form
   erb( :"booking/new")
 end
 
-get '/manager/bookings/:id' do # show
-    @sessions = Session.all
-    @members = Member.all
-    @booking = Booking.find( params[:id] )
-    erb( :"booking/show" )
+get '/manager/bookings/management' do
+  @bookings = Booking.all
+  erb (:"booking/all")
 end
+
+
+
+  get '/manager/bookings/:id' do
+    @booking = Booking.find( params[:id] )
+    erb( :"booking/show_booking" )
+  end
 
 
 post '/manager/bookings' do # create

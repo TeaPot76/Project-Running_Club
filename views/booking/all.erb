@@ -1,0 +1,33 @@
+<div class ="button1"> <a href="/manager"> Index </a> </div>
+<div class ="indexheading">
+<h2>Running Club Bookings</h2>
+<h3>
+  Select booking to edit or delete details:
+</h3></div>
+<div class="indextable">
+<table>
+  <tr>
+  <th><div class="button4">Member</div></th>
+
+    <th> <div class="button4">Session</div></th>
+
+<tr></tr>
+
+  <tr> <% @bookings.each do |booking| %></tr>
+
+  <td> <div class="button3"> <a href="/manager/bookings/<%= booking.id %>">
+
+      <%= booking.id %>
+      <%=booking.sessions_id%></a>  </div></td>
+
+       <td> <div class="button3"><%=booking.members_id %>
+
+      </div>
+      </td>
+
+
+    <%end%>
+
+</tr>
+</table>
+</div>

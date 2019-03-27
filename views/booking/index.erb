@@ -1,18 +1,28 @@
 <div class ="button1" ><a href="/manager"> Index </a> </div>
-
+<table>
+  <tr>
+  <th>
 <% for booking in @bookings %>
 <% end%>
-<h2> <a href="/manager/bookings/<%= booking.id %>"> All bookings </h2></a>
-<ul>
-<% for session in @sessions %>
-<h3>Session name: <%= session.name %> </h3><h5>:::
-  Distance: <%=session.distance%> :::
-    Location: <%=session.location%>
-    :::
-      Instructor: <%=booking.instructor_name%></h5>
+<!-- <h2> <a href="/manager/bookings/<%= booking.id %>"> Current bookings </h2></a> -->
+</th>
+<tr></tr>
+<tr>
+<% for session in @sessions %> </tr>
+<td><div class ="button8"><h3>Session name: <%= session.name %> </h3></div></td>
+<td>  <div class = "button7"> <h5>
+  Distance: <%=session.distance%> </h5></div></td>
+  <td><div class = "button7" ><h5>Location: <%=session.location%></div></td>
+    <td><div class = "button7" ><h5> Instructor: <%=booking.instructor_name%></h5></div>
+    </td>
+    <td> <div class = "button9" >
  <h5>Members: </h5><p><%session.members %> <% session.members.each do |member| %>
-  <li> <%= member.first_name %>  <%= member.last_name %></li>
+  <li><%= member.first_name %>  <%= member.last_name %></li>
   <% end %>
 <%end%>
 </p>
-</ul>
+</div> </td>
+</tr>
+
+
+</table>

@@ -1,3 +1,79 @@
+<form method="post" action="/manager/bookings/stats/<%=@booking.id%>">
+  <ul>
+    <li>
+      <label for="instructor-field">Instructor Name:</label>
+      <input type="text" name="instructor_name" id="name-field"
+      value= "<%= @booking.instructor_name%>"/>
+    </li>
+    <li>
+
+      <label for="sessions_id-field">Session Name:</label>
+       <select name="sessions_id" id="sessions_id">
+         <% @sessions.each do |session| %>
+         <% if session.id == @booking.sessions_id %>
+            <option value=<%= session.id %> selected><%= session.name %></option>
+          <% else %>
+            <option value=<%= session.id %>><%= session.name %></option>
+          <% end %>
+        <% end %>
+      </select>
+          </li>
+
+       <li>
+       <label for="membersfirstname">Select member first name:</label>
+        <select name="members_id" id="member.first_name">
+          <% @members.each do |member| %>
+          <% if member.id == @booking.members_id %>
+             <option value=<%= member.id %> selected><%= member.first_name %>
+
+             </option>
+           <% else %>
+             <option value=<%= member.id %>><%= member.first_name %></option>
+           <% end %>
+         <% end %>
+       </select>
+
+      </li>
+      <li>
+       <label for="memberslastname">Select member last name:</label>
+        <select name="members_id" id="member.last_name">
+          <% @members.each do |member| %>
+          <% if member.id == @booking.members_id %>
+             <option value=<%= member.id %> selected>
+               <%=member.last_name%>
+             </option>
+           <% else %>
+             <option value=<%= member.id %>><%=member.last_name%></option>
+           <% end %>
+         <% end %>
+       </select>
+
+
+      </li>
+    <li>
+
+
+    <li>
+      <input type="submit" value="Confirm Entry"/>
+    </li>
+
+  </ul>
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!--
 <p> Members per session:  </p>
 

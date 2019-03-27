@@ -10,7 +10,7 @@ class Session
    @location = options['location']
    @distance = options['distance'].to_i
    @level = options['level'].to_i
-   @day = options['day'].to_i
+   @day = options['day']
    @time_of_day = options['time_of_day'].to_i
    @price = options['price'].to_i
    @max_number = options['max_number'].to_i

@@ -1,17 +1,28 @@
-<h1>Running Club Sessions</h1>
-<p>
+<div class ="button1" ><a href="/manager"> Index </a> </div>
+<a href = "member/show"> Show </a>
+<div class ="indexheading">
+
+<h2>Running Club Sessions</h2>
+<h3>
   Choose one of listed below session
-</p>
-<% for session in @sessions %>
-  <ul>
-    <li>
-      <a href="/manager/session/<%= session.id %>"><%= session.name %></a>
-    </li>
+</h3>
+</div>
+<div class ="indextable">
 
-  </ul>
+<table>
+  <tr>
+    <th><div class="button4">Session name</div></th>
+
+    <th><div class="button4">Location</div></th>
+    <th></th>
+ <tr> <% for session in @sessions %></tr>
+ <td><div class="button3"><h4>
+      <a href="/manager/session/<%= session.id %>"><%= session.name %></a><h4></div></td>
+
+        <td><div class="button3"><p><%=session.location%></p></div></td>
 
 
-  <p>Session:  <% for sesion in @sessions %>
-    <%= session.by_day %></p>
-    <%end%>
 <% end %>
+</tr>
+</table>
+</div>

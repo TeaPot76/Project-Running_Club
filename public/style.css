@@ -116,8 +116,26 @@ margin: 4px 2px;
 opacity: 0.9;
 transition: 0.3s;
 cursor: pointer;
-width: 100px;
+width: 250px;
 }
+.button3a {
+background-color: white;
+border: none;
+color: black;
+padding: 10px;
+text-align: center;
+font-size: 16px;
+margin: 4px 2px;
+opacity: 0.9;
+transition: 0.3s;
+cursor: pointer;
+width: 250px;
+}
+.button3:hover {
+  background-color: green;
+  color: white;
+ }
+
 
 
 .button4 {
@@ -133,7 +151,7 @@ opacity: 0.6;
 transition: 0.3s;
 display: inline-block;
 cursor: pointer;
-width: 100px;
+width: 250px;
 }
 
 .button6 {

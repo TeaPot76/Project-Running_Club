@@ -3,6 +3,9 @@
 <style>
   table, th, td {
     border: 1px solid black;
+    width td: 100%;
+    padding: 15px;
+    text-align: center;
   }
 </style>
 </head>
@@ -13,7 +16,7 @@
 
 <h2>Running Club Sessions</h2>
 <h3>
-  Choose one of listed below session
+  Choose one of listed below sessions
 </h3>
 </div>
 
@@ -24,32 +27,35 @@
     <th>Session name</th>
 
     <th>Location</th>
+    <th>Date</th>
 
         <th>Maximum number</th>
 
             <th>Number of members</th>
 
-                <th>Level</th>
-                  <th>Distance</th>
-    <th></th>
+                <th>Distance</th>
+                  <th>Level</th>
+
  <tr> <% for session in @sessions %></tr>
- <td>
-      <a href="/manager/session/<%= session.id %>"><%= session.name %></a></td>
+ <td> <div class="button3">
+      <a href="/manager/session/<%= session.id %>"><%= session.name %></a>
+    </div></td>
 
 
         <td><%=session.location%></td>
+        <td><%=session.day%></td>
         <td>
   <%= session.max_number %></td>
   <td><%= session.number_of_members %></td>
 
-     <td><%=session.distance%></td>
+     <td><%=session.distance%> km</td>
  <td><%=session.level%></td>
 
 <% end %>
 
 
 </table>
-</tr>
+
 
 </body>
 </html>

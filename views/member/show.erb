@@ -1,10 +1,13 @@
-<p>test</p>
 
-<p>Session : </p>
-
+<div class ="indexheading">
+<h3>Sessions availability: </h3>
+</div>
+<div class ="showul">
   <ul>
     <% @sessions.each do |session| %>
     <li><%= session.name %> <%= session.day %></li>
     <p>Session availability: <%=session.availability(session.id)%>
 <% end %></p>
   </ul>
+
+  </div>

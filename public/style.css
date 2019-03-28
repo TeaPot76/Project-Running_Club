@@ -149,6 +149,25 @@ width: 250px;
   color: white;
  }
 
+ .button3aa {
+ background-color: oliveDrab;
+ border: none;
+ color: black;
+ padding: 10px;
+ text-align: center;
+ font-size: 16px;
+ font-weight: bold;
+ margin: 4px 2px;
+ opacity: 0.9;
+ transition: 0.3s;
+ cursor: pointer;
+ width: 250px;
+ }
+ .button3aa:hover {
+   background-color: darkblue;
+   color: white;
+  }
+
 
 
 .button4 {
@@ -166,6 +185,28 @@ display: inline-block;
 cursor: pointer;
 width: 250px;
 }
+
+
+.button4aa {
+background-color: beige;
+font-weight: bold;
+border: black;
+color: black;
+padding: 10px 10px;
+text-align: center;
+font-size: 15px;
+margin: 2px 2px;
+opacity: 0.6;
+transition: 0.3s;
+display: inline-block;
+cursor: pointer;
+width: 250px;
+}
+
+.button4aa:hover {
+  background-color: oliveDrab;
+  color: white;
+ }
 
 .button6 {
 background-color: grey;
@@ -319,7 +360,7 @@ ul li {
  }
 
 li{
-  background: silver;
+  background-color: inherit;
   font-size: 16px;
   font-weight: bold;
 }
@@ -332,7 +373,19 @@ input {
   list-style-type: none;
 
 }
+.showul{
+  padding-right: 200px;
+  padding-left: 150px;
+  text-align: left;
+  font-size: 25px;
+  background-color: beige;
+}
 
+.showul li{
+  background-color: #F2E5E5;
+  font-size: 20px;
+  font-weight: bold;
+}
 .button9a:hover {
   background-color: green;
   color: white;

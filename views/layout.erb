@@ -8,13 +8,79 @@
 
   <nav>
 
+  <div class="navbar">
+    <a href="/">Home</a>
+      <a href="/manager">Manager</a>
 
-       <div class="button">
+
+
+
+    <div class="dropdown">
+      <button class="dropbtn">Manager
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="/manager/members">Members</a>
+        <a href="/manager/sessions">Sessions</a>
+        <a href ="/manager/bookings/management">Bookings management</a>
+        <a href="/manager/bookings/stats">Stats</a>
+       </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Members
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="/manager/members">All Members</a>
+        <!-- <a href="">Edit</a> -->
+        <a href="/manager/members/new">Add member</a>
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Sessions
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="/manager/sessions">All Sessions</a>
+        <a href="/manager/bookings">Current Sessions</a>
+        <a href="/manager/sessions/new">Add session</a>
+
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Bookings
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+        <a href="/manager/bookings/management">All Bookings</a>
+        <a href="/manager/bookings/new">Add new booking</a>
+
+      </div>
+    </div>
+
+    <div class="dropdown">
+      <button class="dropbtn">Member Updates
+        <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="dropdown-content">
+          <a href="/member">Club Sessions</a>
+        <a href="/member/show">Session availability</a>
+        <a href="/member/show">Enquiry</a>
+      </div>
+    </div>
+
+  </div>
+
+
+       <!-- <div class="button">
         <a href="/manager">Manager Options</a></div>
 
      <div class="button">
         <a href="/member">Member Options</a>
-      </div>
+      </div> -->
 
 
 

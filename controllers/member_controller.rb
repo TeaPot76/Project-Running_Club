@@ -13,6 +13,7 @@ get '/member' do # index
   @sessions = Session.all()
   @booking = Booking.all
   erb( :"member/sessions" )
+
 end
 #
 # get '/session/:id' do # show

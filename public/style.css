@@ -3,6 +3,70 @@ body {background-color: lightgrey;
  color: black;
 }
 
+
+
+.navbar {
+  padding-bottom: 20px;
+  background-color: dimgrey;
+  overflow: hidden;
+  
+}
+
+.navbar a {
+  float: right;
+  font-size: 16px;
+  color: black;
+  text-align: center;
+  padding: 20px 20px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline-color: invert;
+  color: white;
+  padding: 20px 20px;
+  background-color: mediumslateblue;
+  margin: 0;
+  outline-color: invert;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: inherit;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: silver;
+  min-width: 160px;
+  box-shadow: green;
+  z-index: 2;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: lightgrey;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 h1 {
   color: black;
   text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px oliveDrab;
@@ -13,20 +77,19 @@ h1 {
 .main {
 background: url("/runninglogo.jpeg") no-repeat center center;
 background-size: cover;
-
 }
 
-.main2 {
+.image1 {
+background: url("/runninglogo.jpeg");}
+
+ .main2 {
   color: darkblue;
   padding-left: 600px;
   padding-top: 70px;
   padding-bottom: 250px;
 }
 
-nav {
-  padding-bottom: 20px;
-  background-color: silver;
-}
+
 
 
 footer {
@@ -46,7 +109,6 @@ a:hover {
 } */
 
 
-
 /* table th, td, tr {
    width: auto;
     border: 2px solid black;
@@ -60,6 +122,10 @@ a:hover {
  th {
    border: 1px solid black;
  } */
+
+
+
+
 
 .button {
   display: inline-block;
@@ -77,12 +143,12 @@ a:hover {
 }
 
 .button:hover {
-  background-color: green;
+  background-color: mediumslateblue;
   color: white;
  }
 
 .button1 {
-  background-color: gray; /* Green */
+  background-color: gray; /* mediumslateblue */
   border: 2px solid black;
   color: white;
   padding: 3px;
@@ -96,7 +162,7 @@ a:hover {
 
 
 .button2 {
-  background-color: gray; /* Green */
+  background-color: gray; /* mediumslateblue */
   border: 2px solid black;
   color: white;
   padding: 20px;
@@ -112,7 +178,7 @@ a:hover {
 }
 
 .button2:hover {
-  background-color: green;
+  background-color: mediumslateblue;
   color: white;
  }
 
@@ -145,12 +211,12 @@ cursor: pointer;
 width: 250px;
 }
 .button3:hover {
-  background-color: green;
+  background-color: mediumslateblue;
   color: white;
  }
 
  .button3aa {
- background-color: oliveDrab;
+ background-color: lavender;
  border: none;
  color: black;
  padding: 10px;
@@ -164,7 +230,7 @@ width: 250px;
  width: 250px;
  }
  .button3aa:hover {
-   background-color: darkblue;
+   background-color: mediumslateblue;
    color: white;
   }
 
@@ -204,7 +270,7 @@ width: 250px;
 }
 
 .button4aa:hover {
-  background-color: oliveDrab;
+  background-color: mediumslateblue;
   color: white;
  }
 
@@ -243,7 +309,7 @@ width: 100px;
 }
 
 .button5a:hover {
-  background-color: green;
+  background-color: mediumslateblue;
   color: white;
  }
 
@@ -286,7 +352,7 @@ width: 100px;
  }
 
 .button8:hover {
-  background-color: green;
+  background-color: mediumslateblue;
   color: white;
  }
 
@@ -310,7 +376,7 @@ width: 100px;
 }
 
 .button9:hover {
-  background-color: green;
+  background-color: mediumslateblue;
   color: white;
  }
 

@@ -4,21 +4,27 @@ body {background-color: lightgrey;
 }
 
 
+.navimage {
+    background-clip: url("/logo.jpg");
+}
 
 .navbar {
-  padding-bottom: 20px;
-  background-color: dimgrey;
+  padding-bottom: 30px;
+  background-image: url("/logo.jpg");
+  background-size: cover;
   overflow: hidden;
-  
+  opacity: inherit;
+  color: midnightblue;
 }
 
 .navbar a {
   float: right;
-  font-size: 16px;
+  font-size: 20px;
   color: black;
   text-align: center;
   padding: 20px 20px;
   text-decoration: none;
+
 }
 
 .dropdown {
@@ -31,9 +37,9 @@ body {background-color: lightgrey;
   font-size: 16px;
   border: none;
   outline-color: invert;
-  color: white;
+  color: darkblue;
   padding: 20px 20px;
-  background-color: mediumslateblue;
+  background-color: inherit;
   margin: 0;
   outline-color: invert;
 }
@@ -45,7 +51,7 @@ body {background-color: lightgrey;
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: silver;
+  background-color: mediumslateblue;
   min-width: 160px;
   box-shadow: green;
   z-index: 2;
@@ -60,7 +66,7 @@ body {background-color: lightgrey;
 }
 
 .dropdown-content a:hover {
-  background-color: lightgrey;
+  background-color: lightblue;
 }
 
 .dropdown:hover .dropdown-content {
@@ -75,7 +81,7 @@ h1 {
   font-size: 40px;
 }
 .main {
-background: url("/runninglogo.jpeg") no-repeat center center;
+background: url("/logo.jpg") no-repeat center center;
 background-size: cover;
 }
 
@@ -84,9 +90,9 @@ background: url("/runninglogo.jpeg");}
 
  .main2 {
   color: darkblue;
-  padding-left: 600px;
-  padding-top: 70px;
-  padding-bottom: 250px;
+  padding-left: 10px;
+  padding-top: 2px;
+  padding-bottom: 300px;
 }
 
 

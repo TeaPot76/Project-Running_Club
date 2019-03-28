@@ -9,7 +9,9 @@
   <tr>
   <th><div class="button4">Booking id</div></th>
 
-    <th> <div class="button4">Session Number</div></th>
+    <th> <div class="button4">Session Name</div></th>
+      <th> <div class="button4">Session Id</div></th>
+      <th> <div class="button4">Members Name</div></th>
 
 <tr></tr>
 
@@ -17,12 +19,22 @@
 
   <td> <div class="button3"> <a href="/manager/bookings/<%= booking.id %>">
 
-      <%= booking.id %></td></div> <td> <div class="button3">  <%=booking.session.name%>
-      </a>  </div></td>
+      <%= booking.id %></a></div> </td>
+
+      <td> <div class="button3">  <%=booking.session.name%>
+       </div></td>
+       <td> <div class="button3">  <%=booking.sessions_id%>
+        </div></td>
+       <td> <div class="button3"> <%booking.member %>
+       <%= booking.member.first_name %>  <%= booking.member.last_name %>
+       <% end %>
+
+
+        </div></td>
 
 
 
-        <% end %>
+
       </div>
       </td>
 

@@ -7,7 +7,7 @@
     display: center;
     border: 1px solid black;
     width td: 100%;
-    padding: 15px;
+    padding: 5px;
     text-align: center;
   }
 </style>
@@ -23,6 +23,8 @@
 <!-- <h2> <a href="/manager/bookings/<%= booking.id %>"> Current bookings </h2></a> -->
 </tr>
 <th>Session name</th>
+<th>Session id</th>
+<th>Date</th>
 <th>Session level</th>
 <th>Distance</th>
 <th>Location</th>
@@ -31,18 +33,23 @@
 
 
 <tr> <% for session in @sessions %> </tr>
-<td><div class ="button8"> <h3><%= session.name %> </h3></div></td>
+<td><div class ="button8"> <h4><%= session.name %> </h4></div></td>
+<td><h4> <%= session.id%></h4></td>
+<td><h4><%=session.day%> </h4></td>
 <td><h4><%=session.level%> </h4></td>
 <td><h4><%=session.distance%> km </h4></td>
   <td><h4><%=session.location%></h4></td>
     <td><h4><%=session.availability(session.id)%></h4>
     </td>
     <td> <div class = "button9" >
-  <p><%session.members %> <% session.members.each do |member| %>
-  <li><%= member.first_name %>  <%= member.last_name %></li>
-  <% end %>
+
+  <%session.members %> <% session.members.each do |member| %>
+  <ol>
+  <%= member.first_name %>  <%= member.last_name %>
+  <% end %></ol>
 <%end%>
-</p>
+
+
 </div> </td>
 
 

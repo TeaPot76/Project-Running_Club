@@ -48,6 +48,7 @@ end
 
 get '/manager/bookings/management' do
   @bookings = Booking.all
+
   erb (:"booking/all")
 end
 

@@ -14,7 +14,7 @@
 <h3>
   Select member name to edit or delete details:
 </h3></div>
-<div class="indextable">
+<div class="indextable3">
 <table>
   <tr>
   <th><div class="button4">Member</div></th>
@@ -36,12 +36,15 @@
 
 
        <td> <div class="button3a"><%member.sessions %>
-         <% member.sessions.each do |session| %>
-        <%= session.name %>
-        <% end %>
-      </div>
-      </td>
 
+         <% member.sessions.each do |session| %>
+         <div class ="memberli">
+         <li><%= session.name %></li></div>
+        <% end %>
+
+      </div>
+
+      </td>
 
     <%end%>
 

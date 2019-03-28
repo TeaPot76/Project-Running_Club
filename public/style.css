@@ -35,6 +35,8 @@ footer {
 }
 
 a {
+  font-weight: bold;
+  font-size: 16px;
   text-decoration: none;
   color: black;
 }
@@ -119,12 +121,13 @@ cursor: pointer;
 width: 250px;
 }
 .button3a {
-background-color: white;
+background-color: silver;
 border: none;
 color: black;
 padding: 10px;
 text-align: center;
 font-size: 16px;
+font-weight: bold;
 margin: 4px 2px;
 opacity: 0.9;
 transition: 0.3s;
@@ -216,7 +219,7 @@ width: 160px;
   background-color: grey ;
   border: 2px solid black;
   color: black;
-  padding: 16px;
+  padding: 10px;
   text-align: center;
   display: inline-block;
   font-size: 18px;
@@ -242,7 +245,7 @@ width: 160px;
   background-color: grey ;
   border: 2px solid black;
   color: black;
-  padding: 16px 32px;
+  padding: 10px;
   text-align: center;
   display: inline-block;
   font-size: 10px;
@@ -290,15 +293,25 @@ input {
   font-size: 16px;
 }
 
+.memberli {
+  background-color: silver;
+  list-style-type: none;
+
+}
+
 .button9a:hover {
   background-color: green;
   color: white;
  }
 .indextable {
-  padding-left: 200px;
+  padding-left: 20px;
 }
 .indextable2 {
   padding-left: 10px;
+}
+
+.indextable3 {
+  padding-left: 100px;
 }
 .indexheading {
 padding-left: 200px;

@@ -1,11 +1,12 @@
-<div class ="button1"> <a href="/manager"> Index </a> </div>
+<div class ="button1"> <a href="/manager/bookings"> Index </a> </div>
 <div class= "indexheading">
-<h2>Current Sessions</h2>
+<h2>All Sessions</h2>
 </div>
 <div class = "indextable2">
 <table>
   <tr>
     <th><div class = "button6">Name</div></th>
+    <th><div class = "button6">Date</div></th>
     <th><div class = "button6">Instructor</div></th>
     <th><div class = "button6">Location</div></th>
     <th><div class = "button6">Distance<div></th>
@@ -13,10 +14,14 @@
   </tr>
   <% for session in @sessions %>
   <tr>
-    <td><div class = "button5"><a href="/manager/bookings/stats/<%= session.id %>">
+    <td><div class = "button5a"><a href="/manager/bookings/stats/<%= session.id %>">
     <%= session.name %></a></div></td>
      <%for booking in @bookings%>
      <%end%>
+        <td><div class = "button5">
+
+         <%session.name%> <%= session.day %></div></td>
+
       <td><div class = "button5"><%= booking.instructor_name%></div></td>
      <td><div class = "button5"><%= session.location %></div></td>
       <td><div class = "button5"><%= session.distance%></div></td>

@@ -1,12 +1,17 @@
-<div class ="button1"> <a href="/manager"> Index </a> </div>
+<div class ="button1"> <a href="/manager/members"> Index </a> </div>
 
 <p>Member name: <%= @member.first_name %></p>
 <p>Member last name: <%= @member.last_name %></p>
 <p>Member age: <%= @member.age %></p>
 <p>Member level: <%= @member.level %></p>
 <p>Member town: <%= @member.town %></p>
+<div class = "button9a">
+<a href="/manager/<%= @member.id %>/edit">
+    <input type="submit" value="Edit Member"/></a>
+</div>
 
-<p><a href="/manager/<%= @member.id %>/edit">Edit Member</a></p>
+<div class = "button9a">
 <form method="post" action="/manager/<%= @member.id %>/delete">
   <input type="submit" value="Delete Member"/>
 </form>
+</div>

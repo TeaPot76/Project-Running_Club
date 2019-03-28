@@ -257,6 +257,26 @@ width: 160px;
   height: 80px;
 }
 
+.button9a {
+  background-color: white; /* Green */
+  border: 2px solid black;
+  color: white;
+  padding: 1px;
+  text-align: center;
+
+  cursor: pointer;
+  border-radius: 15%;
+  width: 100px;
+  height: 20px;
+  margin-top: 10px;
+
+}
+
+
+.button9a:hover {
+  background-color: green;
+  color: white;
+ }
 .indextable {
   padding-left: 200px;
 }

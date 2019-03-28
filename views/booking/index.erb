@@ -1,28 +1,52 @@
+
+<html>
+<head>
+<style>
+  table, th, td {
+    padding left: 100px;
+    display: center;
+    border: 1px solid black;
+    width td: 100%;
+    padding: 15px;
+    text-align: center;
+  }
+</style>
+</head>
+<body>
+
 <div class ="button1" ><a href="/manager"> Index </a> </div>
 <table>
   <tr>
-  <th>
+  <tr>
 <% for booking in @bookings %>
 <% end%>
 <!-- <h2> <a href="/manager/bookings/<%= booking.id %>"> Current bookings </h2></a> -->
-</th>
-<tr></tr>
-<tr>
-<% for session in @sessions %> </tr>
-<td><div class ="button8"><h3>Session name: <%= session.name %> </h3></div></td>
-<td>  <div class = "button7"> <h5>
-  Distance: <%=session.distance%> </h5></div></td>
-  <td><div class = "button7" ><h5>Location: <%=session.location%></div></td>
-    <td><div class = "button7" ><h5> Session availability: <%=session.availability(session.id)%></h5></div>
+</tr>
+<th>Session name</th>
+<th>Session level</th>
+<th>Distance</th>
+<th>Location</th>
+<th>Available places</th>
+<th>Members</th>
+
+
+<tr> <% for session in @sessions %> </tr>
+<td><div class ="button8"> <h3><%= session.name %> </h3></div></td>
+<td><h4><%=session.level%> </h4></td>
+<td><h4><%=session.distance%> km </h4></td>
+  <td><h4><%=session.location%></h4></td>
+    <td><h4><%=session.availability(session.id)%></h4>
     </td>
     <td> <div class = "button9" >
- <h5>Members: </h5><p><%session.members %> <% session.members.each do |member| %>
+  <p><%session.members %> <% session.members.each do |member| %>
   <li><%= member.first_name %>  <%= member.last_name %></li>
   <% end %>
 <%end%>
 </p>
 </div> </td>
-</tr>
+
 
 
 </table>
+</body>
+</html>

@@ -38,11 +38,26 @@ a {
   text-decoration: none;
   color: black;
 }
-
+/*
 a:hover {
   color: darkred;
-}
+} */
 
+
+
+/* table th, td, tr {
+   width: auto;
+    border: 2px solid black;
+ } */
+ /* td {
+   border: 1px solid black;
+ }
+ tr {
+   border: 1px solid black;
+ }
+ th {
+   border: 1px solid black;
+ } */
 
 .button {
   display: inline-block;
@@ -88,35 +103,29 @@ a:hover {
   border-radius: 15%;
   width: 250px;
 }
-.button2:hover {
-  background-color: green;
-  color: white;
-}
+
 
 .button3 {
 background-color: silver;
 border: none;
 color: black;
-padding: 16px 32px;
+padding: 10px;
 text-align: center;
 font-size: 16px;
 margin: 4px 2px;
 opacity: 0.9;
 transition: 0.3s;
 cursor: pointer;
-width: 250px;
+width: 100px;
 }
 
-.button3:hover {
-  background-color: lightgreen;
-  color: white;
-}
+
 .button4 {
 background-color: grey;
 font-weight: bold;
 border: black;
 color: black;
-padding: 10px 20px;
+padding: 10px 10px;
 text-align: center;
 font-size: 15px;
 margin: 2px 2px;
@@ -124,7 +133,7 @@ opacity: 0.6;
 transition: 0.3s;
 display: inline-block;
 cursor: pointer;
-width: 250px;
+width: 100px;
 }
 
 .button6 {
@@ -161,13 +170,31 @@ width: 160px;
   width: 160px;
 }
 
-.button5:hover {
-  background-color: green;
-  color: white;
-}
-
 
 .button7 {
+  background-color: grey ;
+  border: 2px solid black;
+  color: black;
+  padding: 16px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  border: 2px solid grey;
+  width: 150px;
+ }
+
+.button8:hover {
+  background-color: green;
+  color: white;
+ }
+
+.button8 {
   background-color: grey ;
   border: 2px solid black;
   color: black;
@@ -185,28 +212,14 @@ width: 160px;
   width: 160px;
   height: 80px;
 }
-.button7:hover {
+
+.button9:hover {
   background-color: green;
   color: white;
-}
+ }
 
-.button8 {
-  background-color: grey ;
-  border: 2px solid black;
-  color: black;
-  padding: 16px 32px;
-  text-align: center;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
-  cursor: pointer;
-  background-color: white;
-  color: black;
-  border: 2px solid grey;
-  width: 150px;
-}
+
+
 .button9 {
   background-color: grey ;
   border: 2px solid black;
@@ -225,6 +238,7 @@ width: 160px;
   width: 150px;
   height: 80px;
 }
+
 .indextable {
   padding-left: 200px;
 }
@@ -235,11 +249,7 @@ width: 160px;
 padding-left: 200px;
 
 }
-#main {
-  width: 220px;
-  display: flex;
-  margin: 0 auto;
-}
+
 
 .menu-item {
   display: inline-block;

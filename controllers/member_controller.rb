@@ -11,7 +11,7 @@ also_reload('../models/*')
 
 get '/member' do # index
   @sessions = Session.all()
-
+  @booking = Booking.all
   erb( :"member/sessions" )
 end
 #
@@ -21,7 +21,7 @@ end
 # end
 
 get '/member/show' do # show
-
-  @sessions = Session.all_by_day
+  @booking = Booking.all
+  @sessions= Session.all_by_day
   erb( :"member/show" )
 end

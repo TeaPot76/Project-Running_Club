@@ -7,9 +7,9 @@
 <div class="indextable">
 <table>
   <tr>
-  <th><div class="button4">Member</div></th>
+  <th><div class="button4">Booking id</div></th>
 
-    <th> <div class="button4">Session</div></th>
+    <th> <div class="button4">Session Number</div></th>
 
 <tr></tr>
 
@@ -17,16 +17,17 @@
 
   <td> <div class="button3"> <a href="/manager/bookings/<%= booking.id %>">
 
-      <%= booking.id %>
-      <%=booking.sessions_id%></a>  </div></td>
+      <%= booking.id %></td></div> <td> <div class="button3">  <%=booking.session.name%>
+      </a>  </div></td>
 
-       <td> <div class="button3"><%=booking.members_id %>
 
+
+        <% end %>
       </div>
       </td>
 
 
-    <%end%>
+
 
 </tr>
 </table>

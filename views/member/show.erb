@@ -5,5 +5,6 @@
   <ul>
     <% @sessions.each do |session| %>
     <li><%= session.name %> <%= session.day %></li>
-    <% end %>
+    <p>Session availability: <%=session.availability(session.id)%>
+<% end %></p>
   </ul>

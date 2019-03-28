@@ -1,2 +1,6 @@
 <div class ="button1" ><a href="/manager"> Index </a> </div>
 <p>Not enough room</p>
+@session = Session.all
+ @members = Session.availability(session.id)
+ if @members > @session.max_number
+   @booking= Booking.new( params )

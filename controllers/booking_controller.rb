@@ -19,7 +19,7 @@ get '/manager/bookings/stats/:id' do
   @bookings = Booking.all
   @members = Member.all
   @sessions = Session.all
-  erb (:"booking/index00")
+  erb (:"booking/indexbookinginfo")
 end
 
 get '/manager/bookings/stats' do
@@ -63,6 +63,7 @@ post '/manager/bookings' do # create
     @booking= Booking.new( params )
     @booking.save()
     erb( :"booking/create")
+
 end
 
 

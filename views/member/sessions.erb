@@ -17,7 +17,7 @@
     <th></th>
  <tr> <% for session in @sessions %></tr>
  <td><div class="button3"><h4>
-      <a href="/manager/session/<%= session.id %>"><%= session.name %></a><h4></div></td>
+      <%= session.name %><h4></div></td>
 
         <td><div class="button3"><p><%=session.location%></p></div></td>
 

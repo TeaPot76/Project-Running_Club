@@ -1,10 +1,14 @@
 <div class ="button1"> <a href="/manager"> Index </a> </div>
 
-<p>Session name: <%= @session.name %></p>
-<p>Session location: <%= @session.location %></p>
-<p>Session distance: <%= @session.distance %></p>
-<p>Session level: <%= @session.level %></p>
-<p><a href="/manager/session/<%= @session.id %>/edit">Edit Session</a></p>
+<h5>Session name: <%= @session.name %></h5>
+<h5>Session location: <%= @session.location %></h5>
+<h5>Session distance: <%= @session.distance %></h5>
+<h5>Session level: <%= @session.level %></h5>
+<div class= "button9a">
+<a href="/manager/session/<%= @session.id %>/edit"><input type="submit" value="Edit Session"/></a>
+</div>
+
+<div class= "button9a">
 <form method="post" action="/manager/session/<%= @session.id %>/delete">
   <input type="submit" value="Delete Session"/>
-</form>
+</form></div>

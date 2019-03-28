@@ -32,7 +32,10 @@
 
 </p>
 
-<p><a href="/manager/bookings/<%= @booking.id %>/edit">Edit Booking</a></p>
+<div class = "button9a">
+<a href="/manager/bookings/<%= @booking.id %>/edit">  <input type="submit" value="Edit Booking"/</a></p>
+</div>
+<div class = "button9a">
 <form method="post" action="/manager/bookings/<%=@booking.id%>/delete">
   <input type="submit" value="Delete Booking"/>
-</form>
+</form></div>

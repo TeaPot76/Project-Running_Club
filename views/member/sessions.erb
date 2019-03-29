@@ -1,5 +1,6 @@
 
 
+<div class ="image2">
 <div class ="indexheading">
   <h1> Rock The Body Running Club </h1>
 <h2> Club Sessions</h2>
@@ -10,20 +11,21 @@
 
 <table>
   <tr>
-    <th><div class="button4aa">Session name</div></th>
-    <th><div class="button4aa">Date </div></th>
-    <th><div class="button4aa">Location</div></th>
-    <th><div class="button4aa">Distance</div></th>
+    <th>Session name/</th>
+    <th>Date </th>
+    <th>Location</th>
+    <th>Distance</th>
     <th></th>
  <tr> <% for session in @sessions %></tr>
- <td><div class="button3aa"><h4>
-      <%= session.name %><h4></div></td>
-        <td><div class="button3a"><p><%=session.day%></p></div></td>
-        <td><div class="button3aa"><p><%=session.location%></p></div></td>
-         <td><div class="button3a"><p><%=session.distance%> km</p></div></td>
+ <td><h4>
+      <%= session.name %><h4></td>
+        <td><p><%=session.day%></p></td>
+        <td><p><%=session.location%></p></td>
+         <td><p><%=session.distance%> km</p></td>
 
 
 <% end %>
 </tr>
 </table>
+</div>
 </div>
